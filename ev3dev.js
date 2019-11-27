@@ -766,9 +766,9 @@ Blockly.Python['grey-color'] = function(block) {
   var code3='';
   
   code0 = 'motorA = LargeMotor(\'outA\')\nmotorB = LargeMotor(\'outB\')\nmotorA.stop_command=\'hold\'\nmotorB.stop_command=\'hold\'\n';
-  code1 = 'motorA.time_sp=1*1000\nmotorB.time_sp=1*1000\n';
+  code1 = 'motorA.time_sp=3*1000\nmotorB.time_sp=3*1000\n';
   code2 = 'motorA.run_timed(duty_cycle_sp=35)\nmotorB.run_timed(duty_cycle_sp=70)\n';
-  code3 = 'time.sleep(1)\nmotorA.stop()\nmotorB.stop()\n';
+  code3 = 'time.sleep(3)\nmotorA.stop()\nmotorB.stop()\n';
 
   code = code0+code1+code2+code3;
 

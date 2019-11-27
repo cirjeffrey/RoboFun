@@ -1,8 +1,3 @@
-/**
- * @fileoverview EV3DEV Python Block Code Generator
- * @author markli97@gmail.com (Mark Li)
- */
-
 'use strict';
 
 goog.provide('Blockly.Python.ev3dev');
@@ -696,7 +691,9 @@ Blockly.Python['purple-color'] = function(block) {
 
 
 
-// Logic programming 1
+// Logic programming 1 
+// COMMENTED OUT LP SECTION EXCEPT GRAY DUE TO OTHER COLORS HAVING CONFLICTING ACTIONS
+/*
 Blockly.Python['blue-lp1'] = function(block) {
   var code='';
   var code0='';
@@ -759,6 +756,7 @@ Blockly.Python['green-lp1'] = function(block) {
   return code;
 };
 
+*/
 
 Blockly.Python['grey-color'] = function(block) {
   var code='';
@@ -769,7 +767,7 @@ Blockly.Python['grey-color'] = function(block) {
   
   code0 = 'motorA = LargeMotor(\'outA\')\nmotorB = LargeMotor(\'outB\')\nmotorA.stop_command=\'hold\'\nmotorB.stop_command=\'hold\'\n';
   code1 = 'motorA.time_sp=1*1000\nmotorB.time_sp=1*1000\n';
-  code2 = 'motorA.run_timed(duty_cycle_sp=-75)\nmotorB.run_timed(duty_cycle_sp=75)\n';
+  code2 = 'motorA.run_timed(duty_cycle_sp=35)\nmotorB.run_timed(duty_cycle_sp=70)\n';
   code3 = 'time.sleep(1)\nmotorA.stop()\nmotorB.stop()\n';
 
   code = code0+code1+code2+code3;
@@ -960,7 +958,7 @@ Blockly.Python['red-lp2'] = function(block) {
   
   code0 = 'motorA = LargeMotor(\'outA\')\nmotorB = LargeMotor(\'outB\')\nmotorA.stop_command=\'hold\'\nmotorB.stop_command=\'hold\'\n';
   code1 = 'motorA.time_sp='+number_time+'*1000\nmotorB.time_sp='+number_time+'*1000\n';
-  code2 = 'motorA.run_timed(duty_cycle_sp=75)\nmotorB.run_timed(duty_cycle_sp=-75)\n';
+  code2 = 'motorA.run_timed(duty_cycle_sp=70)\nmotorB.run_timed(duty_cycle_sp=35)\n';
   code3 = 'time.sleep('+number_time+')\nmotorA.stop()\nmotorB.stop()\n';
 
   code = code0+code1+code2+code3;
@@ -978,7 +976,7 @@ Blockly.Python['orange-lp2'] = function(block) {
   
   code0 = 'motorA = LargeMotor(\'outA\')\nmotorB = LargeMotor(\'outB\')\nmotorA.stop_command=\'hold\'\nmotorB.stop_command=\'hold\'\n';
   code1 = 'motorA.time_sp='+number_time+'*1000\nmotorB.time_sp='+number_time+'*1000\n';
-  code2 = 'motorA.run_timed(duty_cycle_sp=75)\nmotorB.run_timed(duty_cycle_sp=0)\n';
+  code2 = 'motorA.run_timed(duty_cycle_sp=30)\nmotorB.run_timed(duty_cycle_sp=-30)\n';
   code3 = 'time.sleep('+number_time+')\nmotorA.stop()\nmotorB.stop()\n';
 
   code = code0+code1+code2+code3;
@@ -988,7 +986,7 @@ Blockly.Python['orange-lp2'] = function(block) {
 
 Blockly.Python['purple-lp2'] = function(block) {
   var code='';
-  code = 'Sound.speak(\'Good job\')\n';
+  code = 'Sound.speak(\'Good job\').wait()\n';
   return code;
 };
 
@@ -1002,7 +1000,7 @@ Blockly.Python['grey-lp2'] = function(block) {
   
   code0 = 'motorA = LargeMotor(\'outA\')\nmotorB = LargeMotor(\'outB\')\nmotorA.stop_command=\'hold\'\nmotorB.stop_command=\'hold\'\n';
   code1 = 'motorA.time_sp='+number_time+'*1000\nmotorB.time_sp='+number_time+'*1000\n';
-  code2 = 'motorA.run_timed(duty_cycle_sp=-75)\nmotorB.run_timed(duty_cycle_sp=75)\n';
+  code2 = 'motorA.run_timed(duty_cycle_sp=30)\nmotorB.run_timed(duty_cycle_sp=70)\n';
   code3 = 'time.sleep('+number_time+')\nmotorA.stop()\nmotorB.stop()\n';
 
   code = code0+code1+code2+code3;
